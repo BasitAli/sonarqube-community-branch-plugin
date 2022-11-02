@@ -53,7 +53,7 @@ public final class CommunityBranchAgent {
         if (component == Component.CE) {
             redefineEdition(instrumentation, "org.sonar.core.platform.PlatformEditionProvider", redefineOptionalEditionGetMethod());
         } else if (component == Component.WEB) {
-            redefineEdition(instrumentation, "org.sonar.server.almsettings.MultipleAlmFeatureProvider", redefineConstructorEditionProviderField(EditionProvider.Edition.ENTERPRISE));
+            redefineEdition(instrumentation, "org.sonar.server.almsettings.MultipleAlmFeature", redefineConstructorEditionProviderField(EditionProvider.Edition.ENTERPRISE));
             redefineEdition(instrumentation, "org.sonar.server.newcodeperiod.ws.SetAction", redefineConstructorEditionProviderField(EditionProvider.Edition.DEVELOPER));
             redefineEdition(instrumentation, "org.sonar.server.newcodeperiod.ws.UnsetAction", redefineConstructorEditionProviderField(EditionProvider.Edition.DEVELOPER));
         }
